@@ -106,9 +106,11 @@ const argv = yargs(process.argv.slice(2))
         endDate: lastDay,
     });
 
-    const projects = await toggl.projects.list(2535654);
+    const workspaceId = process.env.TOGGL_WORKSPACE_ID;
 
-    const allClients = await toggl.request("https://api.track.toggl.com/api/v9/workspaces/2535654/clients");
+    const projects = await toggl.projects.list(workspaceId);
+
+    const allClients = await toggl.request("https://api.track.toggl.com/api/v9/workspaces/" + workspaceId + "/clients");
 
     const groupedEntries = entries.reduce((acc, entry) => {
         const date = entry.start.split('T')[0];
