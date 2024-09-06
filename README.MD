@@ -44,6 +44,7 @@ Create a `.env` file in the root directory of the project with the following env
 
 ```env
 TOGGL_TRACK_API_TOKEN=your_toggl_api_token
+TOGGL_WORKSPACE_ID=your_toggl_workspace_id
 EMAIL_HOST=your_email_host
 EMAIL_PORT=your_email_port
 EMAIL_USER=your_email_address
