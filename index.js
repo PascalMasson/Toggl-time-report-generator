@@ -14,7 +14,7 @@ const rl = readline.createInterface({
 });
 
 function getCommandLine() {
-   switch (process.platform) { 
+    switch (process.platform) { 
       case 'darwin' : return 'open';
       case 'win32' : return 'start';
       case 'win64' : return 'start';
